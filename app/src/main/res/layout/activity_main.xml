@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/main_bg"
+    tools:context=".view.MainActivity">
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/ivUserImage"
+        android:layout_width="125dp"
+        android:layout_height="125dp"
+        android:layout_marginTop="120dp"
+        android:layout_gravity="center_horizontal|bottom"
+        android:elevation="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/name"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:shapeAppearance="@style/CircleImage"
+        tools:src="@tools:sample/avatars" />
+
+    <EditText
+        android:id="@+id/name"
+        android:layout_width="340dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="50dp"
+        android:background="@color/white"
+        android:elevation="10dp"
+        android:hint="@string/name"
+        android:padding="12dp"
+        android:textColor="@color/black"
+        android:textColorHint="#E4E4E4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ivUserImage" />
+
+    <EditText
+        android:id="@+id/palindrome"
+        android:layout_width="340dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="30dp"
+        android:background="@color/white"
+        android:elevation="10dp"
+        android:hint="@string/palindrome"
+        android:padding="12dp"
+        android:textColor="@color/black"
+        android:textColorHint="#E4E4E4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/name" />
+
+    <Button
+        android:id="@+id/check_button"
+        android:layout_width="340dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/button"
+        android:elevation="10dp"
+        android:text="@string/check"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/palindrome" />
+
+    <Button
+        android:id="@+id/next_button"
+        android:layout_width="340dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/button"
+        android:elevation="10dp"
+        android:text="@string/next"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/check_button" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
